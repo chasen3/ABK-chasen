@@ -148,6 +148,8 @@ jobs:
     name: "${{ inputs.device_manifest }}-${{ inputs.kernel_version }}-${{ inputs.ksu_variant }}"
     uses: ./.github/workflows/oneplus-build.yml
     secrets: inherit
+    env:
+      BALLISTIC: "0"
     with:
       cpu: ${{ inputs.cpu }}
       device_manifest: ${{ inputs.device_manifest }}
